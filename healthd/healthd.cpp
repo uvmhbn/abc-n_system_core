@@ -36,15 +36,25 @@
 using namespace android;
 
 #ifndef BOARD_PERIODIC_CHORES_INTERVAL_FAST
-  // Periodic chores fast interval in seconds
-  #define DEFAULT_PERIODIC_CHORES_INTERVAL_FAST (60 * 10)
+  #ifdef QCOM_HARDWARE
+    // Periodic chores fast interval in seconds
+    #define DEFAULT_PERIODIC_CHORES_INTERVAL_FAST (60 * 10)
+  #else
+    #define DEFAULT_PERIODIC_CHORES_INTERVAL_FAST (60 * 1)
+  #endif
 #else
   #define DEFAULT_PERIODIC_CHORES_INTERVAL_FAST (BOARD_PERIODIC_CHORES_INTERVAL_FAST)
 #endif
 
 #ifndef BOARD_PERIODIC_CHORES_INTERVAL_SLOW
-  // Periodic chores fast interval in seconds
-  #define DEFAULT_PERIODIC_CHORES_INTERVAL_SLOW (60 * 10)
+  #ifdef QCOM_HARDWARE
+    //For the designs without low battery detection,need to enable
+    //the default 60*10s wakeup timer to periodic check.
+    #define DEFAULT_PERIODIC_CHORES_INTERVAL_SLOW -1
+  #else
+    // Periodic chores fast interval in seconds
+    #define DEFAULT_PERIODIC_CHORES_INTERVAL_SLOW (60 * 10)
+  #endif
 #else
   #define DEFAULT_PERIODIC_CHORES_INTERVAL_SLOW (BOARD_PERIODIC_CHORES_INTERVAL_SLOW)
 #endif
