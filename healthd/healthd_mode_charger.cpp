@@ -147,7 +147,7 @@ static struct frame batt_anim_frames[] = {
     {
         .disp_time = 750,
         .min_capacity = 80,
-        .level_only = false,
+        .level_only = true,
         .surface = NULL,
     },
     {
