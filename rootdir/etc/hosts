@@ -5807,7 +5807,6 @@
 0.0.0.0 p.addthis.com
 0.0.0.0 p.iovation.com
 0.0.0.0 p.reuters.com
-0.0.0.0 p.twitter.com
 0.0.0.0 partner.alerts.aol.com
 0.0.0.0 partners.pantheranetwork.com
 0.0.0.0 passpport.com
@@ -5913,7 +5912,6 @@
 0.0.0.0 sa.jumptap.com
 0.0.0.0 sact.atdmt.com
 0.0.0.0 scorecardresearch.com
-0.0.0.0 scribe.twitter.com
 0.0.0.0 scrooge.channelcincinnati.com
 0.0.0.0 scrooge.channeloklahoma.com
 0.0.0.0 scrooge.click10.com
@@ -49683,11 +49681,8 @@
 
 # Twitter
 
-0.0.0.0 www.twitter.com
-0.0.0.0 twitter.com
 0.0.0.0 pbs.twimg.com
 0.0.0.0 abs.twimg.com
-0.0.0.0 syndication.twitter.com
 
 
 # Instagram
